@@ -22,9 +22,6 @@
   "directories": {
     "test": "test"
   },
-  "dependencies": {
-    "chai": "^3.5.0"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/clitetailor/deviation.git"
