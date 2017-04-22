@@ -1,0 +1,36 @@
+{
+  "name": "deviation",
+  "version": "0.0.1",
+  "description": "Manage the deviation between model layers.",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "mocha -u tdd -R dot"
+  },
+  "keywords": [
+    "MVC",
+    "react",
+    "angular",
+    "subscribe",
+    "events",
+    "dispatch"
+  ],
+  "author": "clitetailor",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^3.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clitetailor/deviation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/clitetailor/deviation/issues"
+  },
+  "homepage": "https://github.com/clitetailor/deviation#readme"
+}
