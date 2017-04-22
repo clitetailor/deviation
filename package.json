@@ -12,7 +12,8 @@
     "angular",
     "subscribe",
     "events",
-    "dispatch"
+    "dispatch",
+    "observer"
   ],
   "author": "clitetailor",
   "license": "MIT",

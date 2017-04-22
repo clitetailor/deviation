@@ -46,7 +46,7 @@ deviated.dispatch()
 ```javascript
 import { willBeDeviated, deviate } from 'deviation'
 
-let Todos = (class {
+let Todos = deviate(class {
 	constructor() {
 		this.onSuccess = willBeDeviated;
 		this.onError = willBeDeviated;
