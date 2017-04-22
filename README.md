@@ -3,6 +3,8 @@ Deviation
 
 > Manage the deviation between model layers.
 
+[![Build Status](https://travis-ci.org/clitetailor/deviation.svg?branch=master)](https://travis-ci.org/clitetailor/deviation)
+
 Install
 -------
 
