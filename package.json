@@ -15,6 +15,7 @@
     "dispatch",
     "observer"
   ],
+  "types": "./lib/index.d.ts",
   "author": "clitetailor",
   "license": "MIT",
   "devDependencies": {

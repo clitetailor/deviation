@@ -132,17 +132,22 @@ suite("#main features' test", function () {
 
 		let deviated = new Deviated();
 
+		let unchanged = true;
+
+		let subscription = deviated.onClick(function (msg) {
+			unchanged = false;
+		})
+
+		subscription.unsubscribe();
+
 		deviated.onClick(function (msg) {
-			msg.should.equal('done!');
-		}).onClick(function (msg) {
-			msg.should.equal('done!');
-			done();
+			unchanged.should.equal(true);
 		})
 
 		new Promise(function (resolve) {
 			setTimeout(function () {
 				resolve();
-			}, 1000)
+			}, 1000);
 		})
 			.then(function () {
 				deviated.dispatch();
@@ -150,5 +155,15 @@ suite("#main features' test", function () {
 			.catch(function (err) {
 				done(err)
 			});
+		
+		new Promise(function (resolve) {
+			setTimeout(function () {
+				resolve();
+			}, 1200);
+		})
+			.then(function () {
+				unchanged.should.equal(true);
+				done();
+			})
 	})
 })
