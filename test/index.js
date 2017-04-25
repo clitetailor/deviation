@@ -166,4 +166,34 @@ suite("#main features' test", function () {
 				done();
 			})
 	})
+
+	test('#6', function (done) {
+		class A {
+			constructor() {
+				this.value = 5;
+			}
+		}
+
+		class B extends A {
+			constructor() {
+				super();
+
+				this.subscribe = willBeDeviated;
+			}
+
+			dispatch() {
+				this.subscribe(this.value);
+			}
+		}
+
+		let C = deviate(B);
+
+		let c = new C();
+
+		c.subscribe(a => {
+			a.should.equal(5);
+			done();
+		});
+		c.dispatch();
+	})
 })
